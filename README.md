@@ -13,8 +13,8 @@
 <img src="https://img.shields.io/badge/React_JS-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React.js"/>
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
 <img src="https://img.shields.io/badge/Apollo%20GraphQL-311C87?&style=for-the-badge&logo=Apollo%20GraphQL&logoColor=white" alt="Apollo Client"/>
-<img src="https://img.shields.io/badge/-Axios-blue?logo=axios&style=for-the-badge" alt="Axios"/>
 <img src="https://img.shields.io/badge/Markdown_To_JSX-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Axios"/>
+<img src="https://img.shields.io/badge/strapi-2e7eea?style=for-the-badge&logo=strapi&logoColor=white" alt="strapi"/>
 <img src="https://img.shields.io/badge/-Clsx-pink?logo=clsx&style=for-the-badge" alt="clsx"/>
 <img src="https://img.shields.io/badge/-SASS-black?logo=sass&style=for-the-badge" alt="sass"/>
 <img src="https://img.shields.io/badge/-Moment_JS-Green?logo=moment&style=for-the-badge" alt="sass"/>
@@ -50,4 +50,4 @@ yarn start
 
 <h4>Back-end</h4>
 <p>For the back-end I chose Strapi headless cms for this project. Strapi is a powerful headless cms much like Wordpress</p>
-<p>You can find rest details on this repository: <a href="https://github.com/biswarup35/mui-next-strapi-backend/deployments">Strapi Backend</a>
+<p>You can find rest details on this repository: <a href="https://github.com/biswarup35/mui-next-strapi-backend">Strapi Backend</a>
