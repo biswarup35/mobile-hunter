@@ -7,10 +7,10 @@
   animation: spin 2s linear infinite;
 }
 .spinner-main {
-  border-top: 8px solid #1c0c5b;
+  border-top: 8px solid var(--bg);
 }
 .spinner-secondary {
-  border-top: 8px solid #916bbf;
+  border-top: 8px solid var(--secondary-color);
 }
 
 @keyframes spin {
