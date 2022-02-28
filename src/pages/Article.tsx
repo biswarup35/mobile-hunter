@@ -4,10 +4,15 @@ import { Container, Divider, Grid, Stack } from "../components";
 import { useParams } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 import { Sidebar, Markdown, Loading } from "../views";
+import { CommentForm, Comments } from "../views";
+import { useSnapshot } from "valtio";
+import { commentBox } from "../App/comments";
+import { useComments } from "../hooks";
 
 const post = (slug: string) => gql`
   query {
     articles (where: { slug: "${slug}" }) {
+      id
       title
       excerpt
       content
@@ -28,6 +33,11 @@ const post = (slug: string) => gql`
 const Article = () => {
   const { slug = "" } = useParams();
   const { data, loading } = useQuery(post(slug));
+
+  const { show } = useSnapshot(commentBox);
+  const { comments } = useComments(data?.articles[0]?.id);
+
+  console.log(data?.articles[0]?.id);
 
   if (loading || !data) return <Loading />;
   return (
@@ -85,6 +95,15 @@ const Article = () => {
             <Sidebar />
           </Grid>
         </Grid>
+      </Container>
+      <Container className="my-2" maxWidth="lg">
+        <h4 className="py-2">{`Comments (${comments.length ?? 0})`}</h4>
+        {show && (
+          <div className="my-2">
+            <CommentForm parentId={data?.articles[0]?.id} />
+          </div>
+        )}
+        <Comments data={comments} />
       </Container>
     </div>
   );
